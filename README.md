@@ -1,2 +1,3 @@
-## corebytecms - gallery
-This gallery plugin works on folder level from django-filer.
+## djangocms - gallery
+This gallery plugin works with getting the images from a folder from django-filer.
+
