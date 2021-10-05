@@ -13,7 +13,7 @@ setuptools.setup(
      long_description=long_description,
      long_description_content_type="text/markdown",
      url="https://github.com/svandeneertwegh/djangocms-gallery",
-     packages=["djangocms_gallery"],
+     packages=setuptools.find_packages(),
      include_package_data = True,
      install_requires=[
           'django-cms>=3.9.0',

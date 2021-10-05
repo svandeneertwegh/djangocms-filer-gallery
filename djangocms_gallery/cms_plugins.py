@@ -13,7 +13,6 @@ from .models import ImageGallery
 class GalleryPlugin(CMSPluginBase):
     model = ImageGallery
     name = _("Image gallery")
-    # text_enabled = True
     render_template = 'djangocms_gallery/gallery.html'
 
     def render(self, context, instance, placeholder):
