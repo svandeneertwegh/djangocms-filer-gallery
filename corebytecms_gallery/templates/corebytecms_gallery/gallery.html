@@ -1,0 +1,36 @@
+<!-- Theme CSS -->
+<h4>{{ gallery_name }}</h4>
+
+<ul class="nav nav-pills sort-source sort-source-style-3 justify-content-center" data-sort-id="portfolio"
+    data-option-key="filter" data-plugin-options="{'layoutMode': 'fitRows', 'filter': '*'}">
+    {#    <li class="nav-item active" data-option-value="*"><a class="nav-link text-1 text-uppercase active" href="#">Show#}
+    {#        All</a></li>#}
+</ul>
+
+<div class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2">
+    <div class="row portfolio-list sort-destination" data-sort-id="portfolio">
+        {% for image in gallery_images %}
+            <div class="col-12 col-sm-6 col-lg-3 isotope-item brands">
+                <div class="portfolio-item">
+                    <a href="{{ image.file.url }}">
+                        <span class="thumb-info thumb-info-lighten border-radius-0">
+                            <span class="thumb-info-wrapper border-radius-0">
+
+                                <img src="{{ image.file.url }}"
+                                     class="img-fluid border-radius-0" alt="">
+														<span class="thumb-info-title" style="background-color: rgba(33,37,41,0.0)">
+{#															<span class="thumb-info-inner">{{ image.name }}</span>#}
+															<span class="thumb-info-type">{{ image.name }}</span>
+														</span>
+{#                                <span class="thumb-info-action">#}
+{#                                    <span class="thumb-info-action-icon bg-dark opacity-8"><i#}
+{#                                            class="fas fa-plus"></i></span>#}
+{#                                </span>#}
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
